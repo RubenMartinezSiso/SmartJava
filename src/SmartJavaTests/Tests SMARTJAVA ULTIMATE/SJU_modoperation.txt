@@ -1,0 +1,10 @@
+decl
+	int x.
+	int y.
+start
+	x := 100.
+	y := 40.
+	print 20 % 2.
+	print 20 % 3.
+	print x % y.
+end

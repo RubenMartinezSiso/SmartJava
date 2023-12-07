@@ -1,0 +1,12 @@
+decl
+   func double ( n )
+   decl
+        int x.
+   start
+        x := 2.
+        print 2.
+   end
+   return x * n.
+start
+   print double( 100 ).
+end

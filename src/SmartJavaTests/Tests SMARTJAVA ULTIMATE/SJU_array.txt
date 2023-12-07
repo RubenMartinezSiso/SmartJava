@@ -1,0 +1,14 @@
+decl
+	int x.
+	array n [ 4 ].
+start
+	x := 500.
+	n[0] := 0.
+	n[1] := 10.
+	n[2] := 20.
+	n[3] := 30.
+	
+	print n[0].
+	print n[1] + n[2].
+	print n[3] + x.
+end

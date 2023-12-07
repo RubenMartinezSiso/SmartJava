@@ -1,0 +1,10 @@
+decl
+   int x.
+start
+   x := 2.
+   if x - 2
+      print 0.
+   else
+      print 1.
+   endIf.
+end

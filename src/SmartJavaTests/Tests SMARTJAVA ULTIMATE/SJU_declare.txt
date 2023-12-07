@@ -1,0 +1,6 @@
+decl
+   int x.
+start
+   x := 13.
+   print x.
+end

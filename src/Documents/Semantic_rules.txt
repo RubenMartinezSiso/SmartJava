@@ -1,0 +1,16 @@
+****** SEMANTIC RULES (CHECKER) ******
+
+1. A name (int, bool, array or function) may only be defined once at each scope level.
+2. A name (int, bool array or function) must be defined before it is used.
+3. A name defined as a variable can’t be used as the function name in a function call.
+4. A name defined as a function can’t be used as a variable.
+5. A parameter to a function is treated as variable inside the scope of the function.
+6. A name may be defined on different scope levels. Only the innermost definition is visible.
+7. The left hand side of the := operator must be a variable.
+8. The number of arguments in a function call must the same as the number of parameters in the function definition.
+9. Only + and - is allowed as a unary operator.
+
+10. In function Read, the identifier must be defined before it is used and can not be a function name.
+11. Boolean expressions only allows true/false values.
+12. Int expressions only allows integers numbers values.
+13. Boolean identifiers only allows := operator (+ | - | * | / | % are not allowed).

@@ -1,0 +1,16 @@
+decl
+   int x.
+   func sum( n )
+   decl
+   start
+      read x.
+   end
+   return x + n.
+   int y.
+start
+   read y.
+   for y , 10
+      print sum ( 2 ).
+      y := y + 1.
+	endFor.
+end

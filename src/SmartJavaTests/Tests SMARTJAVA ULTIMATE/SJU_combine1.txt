@@ -1,0 +1,37 @@
+decl
+   func s( n )
+   decl
+      int sum.
+      int d.
+   start
+      sum := 0.
+      d := n / 2.
+      while d
+         if n % d
+         else
+            sum := sum + d.
+         endIf.
+
+         d := d - 1.
+      endWhile.
+   end
+   return sum.
+
+   int m1.
+   int m2.
+   int m3.
+start
+   m1 := 2.
+   while 10 - m1
+      m2 := s( m1 ).
+      m3 := s( m2 ).
+
+      if m1 - m3
+      else
+         print m1.
+         print m2.
+      endIf.
+
+      m1 := m1 + 1.
+   endWhile.
+end

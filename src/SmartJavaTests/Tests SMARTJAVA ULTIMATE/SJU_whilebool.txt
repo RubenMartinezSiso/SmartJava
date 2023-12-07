@@ -1,0 +1,15 @@
+decl
+	bool x.
+	int y.
+start
+	x := true.
+	y := 10.
+	while x
+		if y
+			print y.
+			y := y - 1.
+		else 
+			x := false.
+		endIf.
+	endWhile.
+end

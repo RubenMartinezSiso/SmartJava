@@ -1,0 +1,9 @@
+decl
+	int x.
+	int y.
+start
+	x := 100.
+	y := 20.
+	
+	print ( y + ( (x - 70) * 2 ) / 3 ) + 10 * 5.
+end

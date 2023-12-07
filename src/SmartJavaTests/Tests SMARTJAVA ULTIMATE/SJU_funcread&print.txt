@@ -1,0 +1,11 @@
+decl
+   func sum( n )
+   decl
+      int x.
+   start
+      read x.
+   end
+   return x + n.
+start
+   print sum( 2 ).
+end

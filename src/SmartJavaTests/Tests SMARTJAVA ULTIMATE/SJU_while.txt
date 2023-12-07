@@ -1,0 +1,10 @@
+decl
+   int x.
+start
+   x := 10.
+   while x - 1
+      print x.
+      x := x - 1.
+	endWhile.
+   print x.
+end

@@ -1,0 +1,12 @@
+decl
+	int x.
+	int y.
+start
+	x := -100.
+	y := 300 - 500.
+	
+	print x.
+	print y.
+	print x + y.
+	print y - 500.
+end

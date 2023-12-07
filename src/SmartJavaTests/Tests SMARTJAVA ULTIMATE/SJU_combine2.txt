@@ -1,0 +1,19 @@
+decl
+   int x.
+   func sum( n )
+   decl
+   start
+      read x.
+   end
+   return x + n.
+   bool b.
+start
+b := true.
+   while b
+      print sum ( 2 ).
+      if b
+         b := false.
+      endIf.
+	endWhile.
+   print x.
+end

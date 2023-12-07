@@ -1,0 +1,79 @@
+****** GRAMMAR 5.0 ******
+
+> All upper case is blocks, all lower case is code
+> Characters  "(", ")", "::=", "|", "ε", and "*" are not code
+
+> If: it will execute STATEMENTS if EXP != 0 or EXP = true
+> While: it will repeat STATEMENTS until EXP = 0 or EXP = false
+> For: it will repeat STATEMENTS until EXP = INTEGERLITERAL
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+SMARTJAVA ::= BLOCK
+
+BLOCK ::= decl DECLARATIONS start STATEMENTS end
+
+DECLARATIONS ::= ONEDECLAR*
+
+ONEDECLAR ::= int IDENT
+			| bool IDENT
+			| array IDENT LEFTBR INTEGERLITERAL RIGHTBR.
+			| func IDENT LEFTPARAN ( ε | IDLIST ) RIGHTPARAN BLOCK return EXP.
+
+IDLIST ::= IDENT ( ,IDENT )*
+
+STATEMENTS ::= ONESTAT*
+
+ONESTAT ::= EXP.
+		| PRINTSTAT.
+		| IFSTAT.
+		| WHILESTAT.
+		| FORSTAT.
+		| READSTAT.
+
+EXP ::= EXP1 ( ε | ASSIGNOPERATOR EXP )
+EXP1 ::= EXP2 ( ADDOPERATOR EXP2 )*
+EXP2 ::= PRIMARY ( MULOPERATOR PRIMARY )*
+
+PRIMARY ::= IDENT ( ε | EXPLIST )
+		| ADDOPERATOR PRIMARY
+		| INTEGERLITERAL
+		| BOOLEANVALUE
+		| ( EXP )
+
+EXPLIST ::= EXP ( , EXP )*
+
+
+PRINTSTAT ::= print EXP
+
+IFSTAT ::= if EXP STATEMENTS ( ε | else STATEMENTS ) endIf
+
+WHILESTAT ::= while EXP STATEMENTS endWhile
+
+FORSTAT ::= for EXP , INTEGERLITERAL STATEMENTS endFor
+
+READSTAT ::= read IDENT
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+IDENT ::= An identifier, for example "x" or "double", that refers to an Integer, Boolean, Array or Function name
+
+INTEGERLITERAL ::= An integer value, for example "5"
+
+BOOLEANVALUE ::= A boolean value, "true" or "false"
+
+LEFTPARAN ::= (
+
+RIGHTPARAN ::= )
+
+LEFTBR ::= [
+
+RIGHTBR ::= ]
+
+ASSIGNOPERATOR ::=  :=
+
+ADDOPERATOR ::= + | -
+
+MULOPERATOR ::= * |  /  |  %
+
+# ::= Character to put comments in the language

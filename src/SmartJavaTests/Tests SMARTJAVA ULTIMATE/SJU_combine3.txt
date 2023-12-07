@@ -1,0 +1,17 @@
+decl
+   int y.
+   func sum( n )
+   decl
+   start
+   end
+   return y + n.
+   bool b.
+start
+   read y.
+   #reading a variable from terminal
+   if y - 2
+      print sum ( 2 ).
+   else
+      print sum ( 3 ).
+   endIf.
+end

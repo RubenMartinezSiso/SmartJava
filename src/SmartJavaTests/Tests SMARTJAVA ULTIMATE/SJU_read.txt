@@ -1,0 +1,9 @@
+decl
+   int x.
+   int y.
+start
+	read x.
+	print x.
+	read y.
+	print y.
+end
